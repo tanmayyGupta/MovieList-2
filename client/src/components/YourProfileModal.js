@@ -40,7 +40,7 @@ function YourProfileModal({open, children, onClose}, props) {
         // console.log(obj);
         const id = movie.imdbID;
 
-        const response = await fetch('http://localhost:8001/removeitem', {
+        const response = await fetch('https://movie-list-inky.vercel.app/removeitem', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function YourProfileModal({open, children, onClose}, props) {
         // setTitle(movie.Title);
         // console.log(obj);
 
-        const response = await fetch('http://localhost:8001/newerentry/', {
+        const response = await fetch('https://movie-list-inky.vercel.app/newerentry/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

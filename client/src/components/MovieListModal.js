@@ -28,7 +28,7 @@ function Modal({open, children, onClose}, props) {
         // setTitle(movie.Title);
         // console.log(obj);
 
-        const response = await fetch('http://localhost:8001/newerentry/', {
+        const response = await fetch('https://movie-list-inky.vercel.app/newerentry/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -40,7 +40,7 @@ function Profile () {
     
     async function getList(e) {
         e.preventDefault();
-        const response = await fetch('http://localhost:8001/getlist', {
+        const response = await fetch('https://movie-list-inky.vercel.app/getlist', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',

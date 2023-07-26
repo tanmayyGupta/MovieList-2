@@ -49,7 +49,7 @@ export default function Register() {
         }
 
         if(ans === true) {
-            const response = await fetch('http://localhost:8001/register', {
+            const response = await fetch('https://movie-list-inky.vercel.app/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
