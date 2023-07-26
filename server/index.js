@@ -15,11 +15,9 @@ const { eventNames } = require('./models/user.model.js');
 app.use(express.json());
 app.use(cors());
 
-//password: 2OgEf28LmaaBLd0m
-
 //Database Connection
 mongoose.set("strictQuery", false);
-const uri = 'mongodb+srv://tanmaygupta2021:2OgEf28LmaaBLd0m@cluster0.rzxhjyf.mongodb.net/?retryWrites=true&w=majority'
+const uri = process.env.MONGODB_URL
 mongoose.connect(uri, () => {
     console.log('Mongo Connection Successful');
 });
@@ -63,7 +61,7 @@ app.post('/login', async(req, res) => {
                 name: user.username,
                 email: user.email
             },
-            'thisIsTheSecurityKey123456'
+            process.env.SECURITY_KEY
         );
         return res.json({status :'ok', user : token});
     }
